@@ -43,7 +43,21 @@
 
 /* Cuando las clases están pegadas significa que la regla
 sólo aplica a aquellos elementos que tengan ambas: */
-.fade-enter.fade-enter-active {
+/* .fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 250ms ease-in;
+} */
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
 }
