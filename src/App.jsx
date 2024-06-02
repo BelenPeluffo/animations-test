@@ -1,4 +1,3 @@
-import "./App.css";
 import { AppRouter } from "./routes/AppRouter";
 import Home from "./pages/Home";
 
