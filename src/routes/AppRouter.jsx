@@ -13,10 +13,14 @@ export const AppRouter = () => {
             <Route path='/' element={<Navigate to={DEFAULT_ROUTE} />}/>
             <Route path="/hsl/:h/:s/:l" element={<HSL />} />
             <Route path="/rgb/:r/:g/:b" element={<RGB />} />
-            <Route render={() => <h1>404</h1>} />
+            <Route path='*' element={<ErrorPage />}/>
           </Routes>
         {/* </div> */}
       {/* </div> */}
     </BrowserRouter>
   );
 };
+
+const ErrorPage = () => {
+    return (<div>404</div>)
+}
