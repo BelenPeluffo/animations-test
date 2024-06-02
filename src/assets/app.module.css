@@ -1,5 +1,6 @@
 .fill,
-.content {
+.content,
+.colorPage {
   position: absolute;
   left: 0;
   right: 0;
@@ -27,4 +28,10 @@
 .content {
   top: 40px;
   text-align: center;
+}
+
+.colorPage {
+  color: white;
+  padding-top: 20px;
+  font-size: 30px;
 }
