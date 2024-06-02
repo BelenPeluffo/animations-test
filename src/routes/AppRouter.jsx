@@ -12,10 +12,15 @@ export const AppRouter = () => {
       {/* <div style={styles.content}> */}
       <Routes>
         <Route path="/" element={<Navigate to={DEFAULT_ROUTE} />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home />}>
+          <Route path="hsl/:h/:s/:l" element={<HSL />} />
+          <Route path="rgb/:r/:g/:b" element={<RGB />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+        {/* <Route path="/home" element={<Home />} />
         <Route path="/hsl/:h/:s/:l" element={<HSL />} />
         <Route path="/rgb/:r/:g/:b" element={<RGB />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} /> */}
       </Routes>
       {/* </div> */}
       {/* </div> */}
