@@ -1,15 +1,20 @@
-import { useParams } from "react-router-dom";
 import styles from "../assets/app.module.css";
+import { routeAnimations } from "../constants/routes";
+import { motion } from "framer-motion";
 
 const RGB = () => {
-  const { r, g, b } = useParams();
+  // const { r, g, b } = useParams();
+  console.log('RGB');
   return (
-    <div
-      className={styles.colorPage}
-      style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}
+    <motion.div
+      // className={styles.colorPage}
+      variants={routeAnimations}
+      initial="initial"
+      animate="final"
+      // style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}
     >
-      RGB({r}%, {g}%, {b}%)
-    </div>
+      RGB
+    </motion.div>
   );
 };
 

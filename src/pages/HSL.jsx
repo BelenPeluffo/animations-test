@@ -1,15 +1,20 @@
-import { useParams } from "react-router-dom";
 import styles from "../assets/app.module.css";
+import { motion } from "framer-motion";
+import { routeAnimations } from "../constants/routes";
 
 const HSL = () => {
-  const { h, s, l } = useParams();
+  // const { h, s, l } = useParams();
+  console.log('HSL');
   return (
-    <div
-      className={styles.colorPage}
-      style={{ backgroundColor: `hsl(${h}, ${s}%, ${l}%)` }}
+    <motion.div
+      variants={routeAnimations}
+      initial="initial"
+      animate="final"
+      // className={styles.colorPage}
+      // style={{ backgroundColor: `hsl(${h}, ${s}%, ${l}%)` }}
     >
-      HSL({h}, {s}, {l})
-    </div>
+      HSL
+    </motion.div>
   );
 };
 
