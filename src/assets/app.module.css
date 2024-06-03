@@ -34,30 +34,5 @@
   color: white;
   padding-top: 20px;
   font-size: 30px;
-}
-
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-/* Cuando las clases están pegadas significa que la regla
-sólo aplica a aquellos elementos que tengan ambas: */
-/* .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
-} */
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1000ms ease-in;
+  background-color: coral !important;
 }
