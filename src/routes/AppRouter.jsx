@@ -10,8 +10,10 @@ export const AppRouter = () => {
   return (
     <Routes location={location} key={location.key}>
       <Route path="/" element={<Home />}>
-        <Route path="first-state" element={<Home />} />
-        <Route path="second-state" element={<Home />} />
+        <Route path="age">
+          <Route path="asc"/>
+          <Route path="desc"/>
+        </Route>
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

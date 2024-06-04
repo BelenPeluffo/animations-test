@@ -1,5 +1,4 @@
 .fill,
-.content,
 .colorPage {
   position: absolute;
   left: 0;
@@ -26,8 +25,10 @@
 }
 
 .content {
-  top: 40px;
-  text-align: center;
+  /* top: 40px;
+  text-align: center; */
+  margin: 10%;
+  border: 1px solid black;
 }
 
 .colorPage {

@@ -1,27 +1,28 @@
 import "../assets/app.module.css";
 import { motion, useAnimation } from "framer-motion";
-import { routeAnimations } from "../constants/routes";
+// import { routeAnimations } from "../constants/routes";
 import { useEffect } from "react";
 
-const HSL = ({ position }) => {
+const HSL = ({ name, sign, position }) => {
   // const { h, s, l } = useParams();
   const controls = useAnimation();
 
   useEffect(() => {
     const newPosition = {
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-    }
+      x: Math.random() * (window.innerWidth - window.innerWidth * 0.1),
+      y: Math.random() * (window.innerHeight - window.innerHeight * 0.1),
+    };
     controls.start(newPosition);
   }, [position]);
 
-  console.log("HSL");
+  console.log("position?", position);
   return (
     <motion.div
       // variants={routeAnimations}
       // initial="initial"
       // animate="final"
       // className="colorPage"
+      layout
       animate={controls}
       style={{
         // position: 'absolute',
@@ -31,7 +32,8 @@ const HSL = ({ position }) => {
         background: "blue",
       }}
     >
-      HSL
+      <div>{name}</div>
+      <div>{sign}</div>
     </motion.div>
   );
 };
